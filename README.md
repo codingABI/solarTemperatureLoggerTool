@@ -1,7 +1,14 @@
 # solarTemperatureLoggerTool
 
-Data import Microsoft-Windows-GUI for the solarTemperatureLogger project https://github.com/codingABI/solarTemperatureLogger
-  
+Data import GUI for the solarTemperatureLogger project https://github.com/codingABI/solarTemperatureLogger
+
+Program can
+- reads datasets from a serial adapter
+- Export datasets as CSV file
+- Preview datasets
+
+Program should run on Windows 11/10/8.1/2022/2019/2016/2012R2
+
 ![Screenshot of main window](assets/images/solarTemperatureLoggerTool.png)
 
 ## License and copyright
