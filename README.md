@@ -5,7 +5,7 @@ Data import GUI for the solarTemperatureLogger project https://github.com/coding
 Program can
 - reads datasets from a serial adapter (FTDI, ...)
 - export datasets as a CSV file
-- preview datasets
+- preview datasets in a table and a simple line graph
 
 and should run on Windows 11/10/8.1/2022/2019/2016/2012R2
 
