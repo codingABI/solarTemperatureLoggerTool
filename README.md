@@ -3,7 +3,7 @@
 Data import GUI for the solarTemperatureLogger project https://github.com/codingABI/solarTemperatureLogger
 
 Program can
-- reads datasets from a serial adapter
+- reads datasets from a serial adapter (FTDI, ...)
 - export datasets as a CSV file
 - preview datasets
 
