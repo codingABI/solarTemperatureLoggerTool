@@ -7,7 +7,7 @@ Program can
 - export datasets as a CSV file
 - preview datasets
 
-Program should run on Windows 11/10/8.1/2022/2019/2016/2012R2
+and should run on Windows 11/10/8.1/2022/2019/2016/2012R2
 
 ![Screenshot of main window](assets/images/solarTemperatureLoggerTool.png)
 
