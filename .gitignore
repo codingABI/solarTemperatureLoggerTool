@@ -1,0 +1,3 @@
+internal
+*.o
+sign.cmd

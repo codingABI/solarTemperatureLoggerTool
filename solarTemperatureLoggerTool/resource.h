@@ -1,0 +1,54 @@
+#pragma once
+
+// Program icon
+#define IDI_ICON16 100
+#define IDI_ICON32 101
+
+// Bitmaps
+#define IDB_IMPORT16 102
+#define IDB_SAVE16 103
+#define IDB_INFO16 104
+#define IDB_EXIT16 105
+#define IDB_REFRESH16 106
+#define IDB_IMPORT32 107
+#define IDB_SAVE32 108
+#define IDB_INFO32 109
+#define IDB_EXIT32 110
+#define IDB_REFRESH32 111
+
+// Menu
+#define IDM_IMPORT 4000
+#define IDM_SAVE 4001
+#define IDM_EXIT 4002
+#define IDM_INFO 4003
+#define IDM_COMREFRESH 4004
+#define IDM_COPYSELECTED 4005
+#define IDM_STATICCOM 4006
+#define IDM_EXPLOREFOLDER 4007
+#define IDM_DEVMGR 4008
+
+// Controls
+#define IDC_EVENTLIST 5000
+#define IDC_GROUPBOX 5001
+#define IDC_TABLE 5002
+#define IDC_STATUSBAR 5003
+#define IDC_COMBOBOX 5004
+#define IDC_TAB 5005
+#define IDC_TOOLBAR 5007
+#define IDC_PROGRESSBAR 5008
+#define IDC_PROGRESSBUTTON 5009
+#define IDC_PROGRESSTEXT 5010
+#define IDC_GRAPH 5011
+
+#ifndef IDC_STATIC
+#define IDC_STATIC              -1
+#endif
+
+// Messages
+#define WM_SERIALIMPORTFINISHED (WM_APP+1)
+#define SI_OK 1
+#define SI_TIMEOUT 2
+#define SI_COMERROR 3
+#define SI_FILEERROR 4
+#define SI_ABORT  5
+

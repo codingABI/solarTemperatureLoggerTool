@@ -1,0 +1,33 @@
+# Project: solarTemperatureLoggerTool
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = solarTemperatureLoggerTool_private.res
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o $(RES)
+LIBS     = -L"C:/Daten/Tools/DevCpp/TDM-GCC-64/lib" -L"C:/Daten/Tools/DevCpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -lGdi32 -lShcore -lComctl32 -lComdlg32 -lShlwapi -loleaut32 -lwbemuuid -lole32 -lVersion -s
+INCS     = -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/include" -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/include" -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Daten/Tools/DevCpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = solarTemperatureLoggerTool.exe
+CXXFLAGS = $(CXXINCS) -Os
+CFLAGS   = $(INCS) -Os
+DEL      = C:\Daten\Tools\DevCpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+solarTemperatureLoggerTool_private.res: solarTemperatureLoggerTool_private.rc resource.rc resourceDE.rc resourceEN.rc
+	$(WINDRES) -i solarTemperatureLoggerTool_private.rc --input-format=rc -o solarTemperatureLoggerTool_private.res -O coff 
+

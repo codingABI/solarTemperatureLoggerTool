@@ -1,0 +1,23 @@
+#include "resource.h"
+
+IDI_ICON16 ICON "solarTemperatureLoggerTool16.ico"
+IDI_ICON32 ICON "solarTemperatureLoggerTool32.ico"
+IDB_EXIT16         BITMAP   "exit16.bmp"
+IDB_EXIT32         BITMAP   "exit32.bmp"
+IDB_INFO16         BITMAP   "information16.bmp"
+IDB_INFO32         BITMAP   "information32.bmp"
+IDB_SAVE16         BITMAP   "save16.bmp"
+IDB_SAVE32         BITMAP   "save32.bmp"
+IDB_IMPORT16         BITMAP   "import16.bmp"
+IDB_IMPORT32         BITMAP   "import32.bmp"
+IDB_REFRESH16         BITMAP   "refresh16.bmp"
+IDB_REFRESH32         BITMAP   "refresh32.bmp"
+
+#ifndef RT_MANIFEST
+#define RT_MANIFEST 24
+#endif
+#ifndef CREATEPROCESS_MANIFEST_RESOURCE_ID
+#define CREATEPROCESS_MANIFEST_RESOURCE_ID 1
+#endif
+ 
+CREATEPROCESS_MANIFEST_RESOURCE_ID  RT_MANIFEST "Manifest"
