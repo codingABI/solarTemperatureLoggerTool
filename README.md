@@ -21,7 +21,10 @@ Icons for the toolbar:
 ## Appendix
 
 ### Development environment
+
 Ebmarcadero DEV-C++ 6.3
+
+The Code works without special frameworks and uses only the Win32 API.
 
 ### Digitally signed binaries
 The compiled EXE file is digitally signed with my public key 
