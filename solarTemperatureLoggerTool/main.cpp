@@ -14,6 +14,7 @@
   20240717, Initial version
   20240718, Add simple graph for data values
   20240805, Resize window when dpi have changed
+  20240913, Fix spelling for "Mouseubttons"
 
 ===================================================================+*/
 
@@ -1662,7 +1663,7 @@ void logEnvironment(HWND hWindow) {
 		.append(L"x").append(std::to_wstring(GetSystemMetrics(SM_CYSCREEN))).c_str());
 	addMessageToEventList(std::wstring(L"DPI=").append(std::to_wstring(uDpi)).c_str());
 
-	addMessageToEventList(std::wstring(L"Mouseubttons=").append(std::to_wstring(GetSystemMetrics(SM_CMOUSEBUTTONS))).c_str());
+	addMessageToEventList(std::wstring(L"Mousebuttons=").append(std::to_wstring(GetSystemMetrics(SM_CMOUSEBUTTONS))).c_str());
 	addMessageToEventList(std::wstring(L"Multitouch=").append(std::to_wstring(GetSystemMetrics(SM_MAXIMUMTOUCHES))).c_str());
 
 	addMessageToEventList(std::wstring(L"Bootmode=").append(std::to_wstring(GetSystemMetrics(SM_CLEANBOOT))).c_str());
