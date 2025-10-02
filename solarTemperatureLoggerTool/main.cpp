@@ -15,6 +15,8 @@
   20240718, Add simple graph for data values
   20240805, Resize window when dpi have changed
   20240913, Fix spelling for "Mouseubttons"
+  20241113, Restore SelectObject in paintGraph
+  20251002, Add WINAPI for MyGet* functions to support x86 binaries
 
 ===================================================================+*/
 
@@ -94,7 +96,7 @@ std::vector<DATASET> g_vDatasets;
 UINT MyGetDpiForWindow(HWND hWindow) {
 	UINT uDpi = 96; // Failback value, if GetDpiForWindow could not be used
 
-	UINT ( * GetDpiForWindow)(HWND hwnd) = nullptr;
+	UINT (WINAPI* GetDpiForWindow)(HWND hwnd) = nullptr;
     HMODULE hDLL = GetModuleHandle(L"user32.dll");
     if (hDLL == NULL)
         return uDpi;
@@ -114,7 +116,7 @@ UINT MyGetDpiForWindow(HWND hWindow) {
 int MyGetSystemMetricsForDpi(int nIndex, UINT dpi) {
 	int iMetrics = GetSystemMetrics(nIndex); // Failback value, if GetSystemMetricsForDpi could not be used
 
-	int ( * GetSystemMetricsForDpi)(int nIndex, UINT dpi) = nullptr;
+	int (WINAPI* GetSystemMetricsForDpi)(int nIndex, UINT dpi) = nullptr;
     HMODULE hDLL = GetModuleHandle(L"user32.dll");
     if (hDLL == NULL)
         return iMetrics;
@@ -1941,7 +1943,7 @@ void paintGraph(HWND hDlg) {
 	// Backup memory device context state
 	int iBackupDC = SaveDC(hdcMemoryDevice);
 	
-	SelectObject(hdcMemoryDevice,bmBuffer);
+	HBITMAP hOldBitmap = (HBITMAP)SelectObject(hdcMemoryDevice,bmBuffer);
 	
 	FillRect(hdcMemoryDevice, &rect, (HBRUSH)(COLOR_WINDOW));
 
@@ -2002,7 +2004,9 @@ void paintGraph(HWND hDlg) {
   
   	// Copy buffer to display
 	BitBlt(hdc,0,0,iWidth,iHeight,hdcMemoryDevice,0,0,SRCCOPY);
-	// Restore memory device context statte
+	
+	// Restore memory device context state
+	SelectObject(hdcMemoryDevice,hOldBitmap);
 	RestoreDC(hdcMemoryDevice,iBackupDC);
 	DeleteObject(bmBuffer);
 	DeleteDC(hdcMemoryDevice);
