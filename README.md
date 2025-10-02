@@ -12,7 +12,7 @@ and should run on Windows 11/10/8.1/2022/2019/2016/2012R2
 ![Screenshot of main window](assets/images/solarTemperatureLoggerTool.png)
 
 ## License and copyright
-This project is licensed under the terms of the 2-Clause BSD License [Copyright (c) 2024 codingABI](LICENSE). 
+This project is licensed under the terms of the 2-Clause BSD License [Copyright (c) 2024-2025 codingABI](LICENSE). 
 
 Icons for the toolbar:
 - Icons for Import, Save, Information and Exit: Game icon pack by Kenney Vleugels (www.kenney.nl), https://kenney.nl/assets/game-icons, CC0

@@ -4,7 +4,7 @@
   Summary:   Data import GUI for the solarTemperatureLogger project (Developed with Ebmarcadero DEV-C++ 6.3)
 
   License: 2-Clause BSD License
-  Copyright (c) 2024 codingABI
+  Copyright (c) 2024-2025 codingABI
 
   Icons for the toolbar:
   	Icons for Import, Save, Information and Exit: Game icon pack by Kenney Vleugels (www.kenney.nl), https://kenney.nl/assets/game-icons, CC0
